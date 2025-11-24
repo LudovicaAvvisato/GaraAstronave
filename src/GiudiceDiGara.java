@@ -7,6 +7,6 @@ public class GiudiceDiGara {
  }
 
       /*  public int calcoloP(){
-        return percorso/as.vel;
+        return percorso/as.vel; boh
     }*/
 }
