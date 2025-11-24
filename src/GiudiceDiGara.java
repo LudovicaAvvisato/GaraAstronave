@@ -1,11 +1,12 @@
 public class GiudiceDiGara {
     int percorso;
-
- public GiudiceDiGara(int percorso){
+    //Astronave as;
+ public GiudiceDiGara(int percorso, Astronave as){
             this.percorso = percorso;
+            //this.as=as;
  }
 
-        /*public int calcoloP(){
-        return percorso/velocità;
+      /*  public int calcoloP(){
+        return percorso/as.vel;
     }*/
 }
