@@ -24,7 +24,7 @@ public class Astronave implements Runnable{
 
     }
 
-    public int calcoloP(){
+    /*public int calcoloP(){
         return per*vel;
-    }
+    }*/
 }
