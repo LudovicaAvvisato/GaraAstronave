@@ -10,7 +10,8 @@ public class Astronave implements Runnable{
         this.giudice=giudice;
         this.vel=vel;
     }
-    
+
+
     @Override
     public void run(){
             System.out.println("Sono l'astronave nr: "+ this.id);
