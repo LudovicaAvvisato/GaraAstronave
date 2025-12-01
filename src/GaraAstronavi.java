@@ -3,6 +3,8 @@
 public class GaraAstronavi {
     public static void main(String[] args) {
         GiudiceDiGara giudice= new GiudiceDiGara(987654);
-        //Astronave astronave= new Astronave(36, giudice);
+        Astronave astronave= new Astronave(36, giudice);
+
+        astronave.run();
     }
 }

@@ -1,7 +1,7 @@
 public class GiudiceDiGara {
     int percorso;
     //Astronave as;
- public GiudiceDiGara(int percorso, Astronave as){
+ public GiudiceDiGara(int percorso){
             this.percorso = percorso;
             //this.as=as;
  }
