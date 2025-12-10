@@ -1,31 +1,30 @@
-import java.util.Scanner;
+class Astronave extends Thread {
+    private  Percorso percorso;
+    private  Giudice giudice;
+    private  int velocita;
+    private int distanzaPercorsa = 0;
 
-public class Astronave implements Runnable{
-    int id;
-    GiudiceDiGara giudice;
-    int vel=50;
-
-    public Astronave(int id,GiudiceDiGara giudice ){
-        this.id=id;
-        this.giudice=giudice;
-        this.vel=vel;
+    public Astronave(String nome, int velocita, Percorso percorso, Giudice giudice) {
+        super(nome);
+        this.velocita = velocita;
+        this.percorso = percorso;
+        this.giudice = giudice;
     }
-
 
     @Override
     public void run() {
-        System.out.println("Sono l'astronave nr: " + this.id);
-        int distPer = 0;
-        while (distPer < giudice.percorso) {
-            distPer += vel;
-            System.out.println(distPer);
-            try {
-                Thread.sleep(3600);
-            } catch (InterruptedException e) {
-                throw new RuntimeException(e);
+        try {
+            while (distanzaPercorsa < percorso.getLunghezza()) {
+                Thread.sleep(1000);
+                distanzaPercorsa += velocita;
+                if (distanzaPercorsa > percorso.getLunghezza()) distanzaPercorsa = percorso.getLunghezza();
+                System.out.println(getName() + " ha percorso: " + distanzaPercorsa + "/" + percorso.getLunghezza());
             }
-
+            if (!giudice.isGaraConclusa()) {
+                giudice.arrivo(this);
+            }
+        } catch (InterruptedException e) {
+            e.printStackTrace();
         }
-
-
-    }}
+    }
+}
