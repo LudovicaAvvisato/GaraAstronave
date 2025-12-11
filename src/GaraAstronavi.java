@@ -2,7 +2,7 @@ import java.util.List;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-
+//Non funziona perdettamente
 public class GaraAstronavi {
     public static void main(String[] args) throws InterruptedException {
         Scanner sc = new Scanner(System.in);
